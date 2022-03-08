@@ -54,7 +54,7 @@ export const dataListStyles = makeStyles((theme: Theme) =>
 			backgroundColor: themeStyle.greenColor,
 			color: themeStyle.whiteText,
 			textTransform: 'uppercase',
-			borderRadius: 20,
+			borderRadius: 15,
 			fontFamily: themeStyle.fontFamily,
 		},
 	})

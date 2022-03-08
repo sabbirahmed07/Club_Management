@@ -67,7 +67,7 @@ export default function MemberList() {
 		return (
 			<Grid className={classes.container}>
 				<Text data='All Club Members' styles={classes.header} />
-				<Grid container spacing={2} justifyContent='center'>
+				<Grid container justifyContent='center'>
 					<Grid item xs={10} sm={8} md={9} lg={8} xl={9}>
 						<Grid container spacing={2} justifyContent='flex-start'>
 							{cards.length > 0 ? (
