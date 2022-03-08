@@ -4,10 +4,10 @@ import bodyParser from 'body-parser';
 import cors from 'cors';
 import multer from 'multer';
 import path from 'path';
+import 'dotenv/config';
 
 import clubRoutes from './routes/clubs';
 import memberRoutes from './routes/members';
-import { DB_CONFIG } from './config/db';
 import { errorMiddleWare } from './middleware/error';
 
 const app: Application = express();
@@ -70,7 +70,7 @@ if (process.env.NODE_ENV === 'production') {
 const port = process.env.PORT || 8080;
 
 mongoose
-	.connect(DB_CONFIG.url)
+	.connect(process.env.MONGO_URL as string)
 	.then((result) => {
 		app.listen(port, () => console.log('Connected'));
 	})
